@@ -1,9 +1,9 @@
-const express = require('express'),
-  app = express(),
-  port = process.env.PORT || 3000;
-  mongoose = require('mongoose'),
-  Task = require('./api/models/todoListModel'),
-  bodyParser = require('body-parser');
+const express = require('express')
+  const app = express()
+  const port = process.env.PORT || 3000;
+  import mongoose from 'mongoose';
+  import Task from './api/models/todoListModel';
+  import bodyParser from 'body-parser';
 
   //mongoose
   mongoose.Promise = global.Promise;
