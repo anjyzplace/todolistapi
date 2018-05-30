@@ -1,6 +1,6 @@
 const express = require('express')
   const app = express()
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 3001;
   import mongoose from 'mongoose';
   import Task from './api/models/todoListModel';
   import bodyParser from 'body-parser';
