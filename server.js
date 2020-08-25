@@ -1,3 +1,5 @@
+
+require('dotenv').config()
 const express = require('express'),
   app = express(),
   port = process.env.PORT || 3000;
@@ -7,8 +9,10 @@ const express = require('express'),
 
   //mongoose
   mongoose.Promise = global.Promise;
-  mongoose.connect('mongodb://localhost/Tododb');
-
+  mongoose.set('useUnifiedTopology', true);
+  mongoose.connect(process.env.MONGODB_URL,  {useNewUrlParser: true });
+  
+  console.log(process.env.SECRET)
   app.unsubscribe(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
 
@@ -17,3 +21,5 @@ const express = require('express'),
 app.listen(port);
 
 console.log('TodoList RESTful API server started on: ' + port);
+
+// AgbalaGbangba5
