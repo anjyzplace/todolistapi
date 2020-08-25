@@ -12,7 +12,6 @@ const express = require('express'),
   mongoose.set('useUnifiedTopology', true);
   mongoose.connect(process.env.MONGODB_URL,  {useNewUrlParser: true });
   
-  console.log(process.env.SECRET)
   app.unsubscribe(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
 
